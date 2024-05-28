@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lista Presença</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--
+    Beatriz Hitomi Gunji - RA: 10402435
+    Giovana Gomes Leal - RA: 10401161
+    Vitor Akira Uehara - RA: 10401164
+   -->
+</head>
+
+<body class="tamanhoFonte">
+  <header>
+    <section class="botoesCima">
+      <button class="botaoVoltar tamanhoFonte" id="botaoConfirmar">Voltar</button>
+      <a href="relatorio_faltas.html" class="botaoVoltar tamanhoFonte" id="botaoConfirmar">Relatorio de Faltas</a>
+      <button class="botaoLetra tamanhoFonte" id="botaoMudarLetra" onclick="mudarFonte()">Mudar Fonte</button>
+    </section>
+
+    <section class="aumentarFonte">
+      <button onclick="mudarTamanhoFonte('aumentar')" class="botaoA tamanhoFonte" id="botaoAMais">A+</button>
+      <button onclick="mudarTamanhoFonte('diminuir')" class="botaoA tamanhoFonte" id="botaoAMenos">A-</button>
+    </section>
+
+    <h1 class="tamanhoFonte">LISTA DE PRESENÇA</h1>
+  </header>
+
+  <div class="container-menu">
+    <div class="menu-group">
+      <h3 class="tamanhoFonte">Professor:</h3>
+      <div class="menu" id="menu-professor">
+        <div class="selecionar">
+          <span class="selecionado">Selecione um professor</span>
+          <div class="seta"></div>
+        </div>
+        <ul class="opcoes">
+          <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <h3 class="tamanhoFonte">Disciplina:</h3>
+      <div class="menu" id="menu-disciplina">
+        <div class="selecionar">
+          <span class="selecionado">Selecione uma disciplina</span>
+          <div class="seta"></div>
+        </div>
+        <ul class="opcoes">
+          <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <h3 class="tamanhoFonte">Turma:</h3>
+      <div class="menu" id="menu-turma">
+        <div class="selecionar">
+          <span class="selecionado">Selecione uma turma</span>
+          <div class="seta"></div>
+        </div>
+        <ul class="opcoes">
+          <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="bloco-lista" id="lista-alunos">
+    <p id="mensagem-inicial">Escolha uma turma para ver os alunos.</p>
+    <!-- Aqui serão inseridos os alunos dinamicamente -->
+  </section>
+
+  <button type="button" class="botao" id="botao-confirmar">Confirmar</button>
+
+  <script src="script.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAcMyHa3GfXZZ78psavu2HS1dGFo7s53M4",
+      authDomain: "sistema-de-faltas.firebaseapp.com",
+      projectId: "sistema-de-faltas",
+      storageBucket: "sistema-de-faltas.appspot.com",
+      messagingSenderId: "422488256078",
+      appId: "1:422488256078:web:68ea62c5000bad3df61d1f",
+      measurementId: "G-6JWJ6XX9SV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+
+</html>

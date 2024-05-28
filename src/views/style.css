@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-size: auto;
+}
+
+body {
+  line-height: 2;
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.botoesCima{
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botaoVoltar {
+  display: block;
+  padding: 10px;
+  background-color: #87CEFA;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 12px;
+  box-shadow: 4px 4px 0px #50abe4;
+  transition: .3s;
+  float: left;
+  transition-timing-function: ease-in-out;
+}
+
+.botaoLetra {
+  display: block;
+  padding: 10px;
+  background-color: #87CEFA;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 14px;
+  box-shadow: 4px 4px 0px #50abe4;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  float: right;
+}
+
+.botaoA {
+  display: block;
+  padding: 10px;
+  background-color: #87CEFA;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 12px;
+  box-shadow: 4px 4px 0px #50abe4;
+  transition: .2s;
+  float: right;
+  justify-content: space-between;
+  user-select: none;
+}
+
+#botaoAMais {
+  margin-right: 20%;
+}
+
+.aumentarFonte {
+  display: flex;
+  float: right;
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 90px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+h3 {
+  font-size: 15px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+span{
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+li {
+  font-size: 15px;
+  margin-right: 12px;
+}
+
+.container-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.menu-group {
+  flex: 1;
+  margin: 0 1em;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu *{
+  box-sizing: border-box;
+}
+
+.selecionar{
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.selecionar-clicked{
+  border: 2px #87CEFA solid;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.seta{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid black;
+  transition: 0.3s;
+}
+
+.seta-rotate{
+  transform: rotate(180deg);
+}
+
+.opcoes{
+  list-style: none;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 0.5em;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  top: 4em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+  background: white;
+}
+
+.opcoes li{
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.opcoes li:hover{
+  background-color: #87CEFA;
+}
+
+.opcoes-open{
+  display: block;
+  opacity: 1;
+}
+
+.bloco-lista {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.caixa-aluno {
+  flex: 1 1 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #f3f3f3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.caixa-aluno.falta {
+  background-color: #ffcccc;
+}
+
+.botao {
+  display: block;
+  padding: 25px;
+  background-color: #87CEFA;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 1rem auto;
+  width: auto;
+  box-shadow: 4px 4px 0px #50abe4;
+  transition: 0.3s;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  transition-timing-function: ease-in-out;
+}
+
+button:active {
+  transform: translateY(15px);
+}
+
+#mensagem-inicial {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  font-weight: bold;  /* Deixa o texto em negrito */
+  font-size: 1.5em;   /* Aumenta o tamanho da fonte */
+  margin-top: 20px;   /* Adiciona uma margem superior */
+}
+
+@media (max-width: 768px) {
+    .caixa-aluno {
+        flex: 1 1 100%;
+    }
+}
